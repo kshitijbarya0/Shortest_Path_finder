@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shortest Path Finder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="instructions">
+        <h2>How to Use:</h2>
+        <p>Welcome to the Shortest Path Finder web app! Follow these steps to get started:</p>
+        <ol>
+            <li>Click on the canvas to add nodes.</li>
+            <li>Enter the source node index, destination node index, and the distance between them.</li>
+            <li>Click the "Add Edge" button to add the edge between the nodes.</li>
+            <li>Repeat steps 2 and 3 to add more edges.</li>
+            <li>Specify the source and destination nodes in the controls section.</li>
+            <li>Click the "Find Shortest Path" button to calculate the shortest path.</li>
+        </ol>
+    </div>
+    <div id="graph-container" onclick="addNode(event)">
+        <canvas id="canvas"></canvas>
+    </div>
+    <div id="controls">
+    <label for="sourceNode">Source Node:</label>
+    <input type="number" id="sourceNode" min="0">
+    <label for="destNode">Destination Node:</label>
+    <input type="number" id="destNode" min="0">
+    <label for="distance">Distance:</label>
+    <input type="number" id="distance" min="1">
+    <button onclick="addEdge()">Add Edge</button>
+    <span></span>
+    <button id="find-shortest-path-button" onclick="findShortestPath()">Find Shortest Path</button>
+</div>
+    <div id="result">  <h2>result</h2></div>
+    <script src="java.js"></script>
+</body>
+</html>

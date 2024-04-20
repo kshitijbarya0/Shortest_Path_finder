@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 50px;
+    display: flex;
+    flex-direction: row; /* Display instructions and content side by side */
+    align-items: flex-start; /* Align items to the top */
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #4a69bb, #3b8eda);
+}
+
+#instructions {
+    width: 300px; /* Set the width of the instruction section */
+    padding: 20px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    margin-right: 20px; /* Add margin to separate from the content */
+}
+
+#graph-container {
+    position: relative;
+    margin-right: 20px; /* Add margin to separate from the controls */
+}
+
+canvas {
+    border: 2px solid #ccc;
+    cursor: crosshair;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+#controls {
+    display: flex;
+    flex-direction: column; /* Align controls vertically */
+    align-items: center;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+input[type="number"] {
+    width: 50px;
+    margin-bottom: 10px; /* Add margin below inputs */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#find-shortest-path-button {
+    padding: 19px 9px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    margin-top: 10px; /* Add margin above the button */
+    outline: none; /* Remove default outline */
+}
+
+#find-shortest-path-button:hover {
+    background-color: #45a049;
+}
+
+#find-shortest-path-button:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Add a shadow effect when focused */
+}
+
+#result {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    color: #333;
+    text-align: center;
+}
+
+#result p {
+    margin: 10px 0;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+#result p:first-child {
+    font-weight: bold;
+    font-size: 20px;
+}
